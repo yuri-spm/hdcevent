@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-        <title>HDCEvent</title>
+@section('title', 'HDC Events')
 
-        <link rel="stylesheet" href="/css/style.css">
-        <script src="/js/scripts.js"></script>       
-    </head>
-    <body>
+@section('content')
+    
+
+    
+
        <h1>Algum título</h1>
        <img src="/img/banner.jpg" alt="Banner">
        @if(10 < 5)
@@ -38,5 +35,6 @@
         <p>{{$loop->index}}</p>
         <p>{{$nome}}</p>
     @endforeach
-    </body>
-</html>
+
+
+@endsection
