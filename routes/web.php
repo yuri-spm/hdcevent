@@ -17,4 +17,6 @@ use App\Http\Controllers\EventContoller;
 
 Route::get('/', [EventContoller::class, 'index']); 
 Route::get('/events/create', [EventContoller::class, 'create']);
+Route::get('/events/{id}', [EventContoller::class, 'show']);
 Route::post('/events',[EventContoller::class, 'store']);
+
