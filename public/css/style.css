@@ -1,3 +1,7 @@
 *{
     font-size: 'Roboto';
 }
+
+#navbar img{
+    width: 50px;
+}
