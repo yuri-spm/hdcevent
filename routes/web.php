@@ -20,6 +20,9 @@ Route::get('/', [EventContoller::class, 'index']);
 Route::get('/events/create', [EventContoller::class, 'create'])->middleware('auth');
 Route::get('/events/{id}', [EventContoller::class, 'show']);
 Route::post('/events',[EventContoller::class, 'store']);
+Route::delete('/events/{id}',[EventContoller::class, 'destroy']);
+
+
 
 Route::get('/dashboard',[EventContoller::class, 'dashboard'])->middleware('auth');
 
