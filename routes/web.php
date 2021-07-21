@@ -14,13 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\EventContoller;
+use Illuminate\Routing\Router;
 
 Route::get('/', [EventContoller::class, 'index']); 
 Route::get('/events/create', [EventContoller::class, 'create'])->middleware('auth');
 Route::get('/events/{id}', [EventContoller::class, 'show']);
 Route::post('/events',[EventContoller::class, 'store']);
 
+Route::get('/dashboard',[EventContoller::class, 'dashboard'])->middleware('auth');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
