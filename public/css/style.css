@@ -200,6 +200,10 @@
   display: flex;
 }
 
+#description-container{
+  margin-top: 30px;
+}
+
 
   /* footer */
   footer {
