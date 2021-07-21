@@ -14,15 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\EventContoller;
-use Illuminate\Routing\Router;
+
 
 Route::get('/', [EventContoller::class, 'index']); 
 Route::get('/events/create', [EventContoller::class, 'create'])->middleware('auth');
 Route::get('/events/{id}', [EventContoller::class, 'show']);
 Route::post('/events',[EventContoller::class, 'store']);
-Route::delete('/events/{id}',[EventContoller::class, 'destroy']);
-
+Route::get('/events/edit/{id}', [EventContoller::class, 'edit'])->middleware('auth');
+Route::put('/events/update/{id}',[EventContoller::class, 'update'])->middleware('auth');
+Route::delete('/events/{id}',[EventContoller::class, 'destroy'])->middleware('auth');;
 
 
 Route::get('/dashboard',[EventContoller::class, 'dashboard'])->middleware('auth');
-
