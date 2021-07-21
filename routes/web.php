@@ -20,3 +20,7 @@ Route::get('/events/create', [EventContoller::class, 'create']);
 Route::get('/events/{id}', [EventContoller::class, 'show']);
 Route::post('/events',[EventContoller::class, 'store']);
 
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
