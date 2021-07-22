@@ -39,9 +39,9 @@
                   @csrf
                   <a href="/logout" 
                     class="nav-link" 
-                    onclick="event.preventDefault();
-                    this.closest('form').submit();">
-                    Sair
+                      onclick="event.preventDefault();
+                        this.closest('form').submit();">
+                          Sair
                   </a>
                 </form>
               </li>
