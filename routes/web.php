@@ -29,3 +29,4 @@ Route::get('/dashboard',[EventContoller::class, 'dashboard'])->middleware('auth'
 
 Route::post('/events/join/{id}',[EventContoller::class, 'joinEvent'])->middleware('auth');
 
+Route::delete('/events/leave/{id}',[EventContoller::class, 'leaveEvent'])->middleware('auth');
